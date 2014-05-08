@@ -1,0 +1,12 @@
+<ul>
+  <% @animals.each do |animal| %>
+    <li>
+      <%= animal.name %>
+    </li>
+  <% end %>
+</ul>
+
+<form action="/animals" method="post">
+  <input type="text" name="name">
+  <input type="submit" value="Add">
+</form>
