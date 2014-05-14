@@ -15,5 +15,11 @@ feature 'animal counter' do
 
     click_on 'pig'
     expect(page).to have_content 'This is a pig'
+
+    click_on 'Edit Animal'
+    fill_in 'name', with: 'spider'
+    click_on 'Update'
+
+    expect(page).to have_content 'This is a spider'
   end
 end
