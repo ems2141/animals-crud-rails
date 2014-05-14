@@ -3,3 +3,8 @@
 <p> This is a <%= @animal.name %></p>
 
 <a href="/animals/<%= @animal.id %>/edit">Edit Animal</a>
+
+<form action="/animals/<%= @animal.id %>" method="post" class="delete-form">
+  <input type="hidden" name="_method" value="delete" />
+  <input type="submit" value="Delete Animal">
+</form>

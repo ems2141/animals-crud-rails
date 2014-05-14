@@ -21,5 +21,8 @@ feature 'animal counter' do
     click_on 'Update'
 
     expect(page).to have_content 'This is a spider'
+
+    click_on "Delete Animal"
+    expect(page).to have_no_content 'spider'
   end
 end
