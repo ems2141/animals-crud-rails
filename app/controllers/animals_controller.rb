@@ -9,4 +9,8 @@ class AnimalsController < ApplicationController
     redirect_to '/animals'
   end
 
+  def show
+    @animal = Animal.find(params[:id])
+  end
+
 end

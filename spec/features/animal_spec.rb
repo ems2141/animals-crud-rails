@@ -12,5 +12,8 @@ feature 'animal counter' do
 
     expect(page).to have_content 'pig'
     expect(page).to have_content 'tiger'
+
+    click_on 'pig'
+    expect(page).to have_content 'This is a pig'
   end
 end
